@@ -24,8 +24,9 @@ def merge_message(msg, frontend_msg):
 @click.argument('locale')
 def cli(locale):
     catalog_file = 'src/locale/%s/LC_MESSAGES/django.po' % locale
-    frontend_file = 'build/javascript.po'
+    frontend_file = 'po/javascript.po'
     if not os.path.isfile(frontend_file):
+	print 'not found frontend file'
         return
 
     with open(catalog_file) as f:

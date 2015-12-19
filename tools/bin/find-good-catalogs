@@ -26,7 +26,7 @@ def cli(catalog_file):
     with open(catalog_file) as f:
         rv = json.load(f)['supported_locales']
 
-    base = 'src/locale'
+    base = 'src'
     for locale in os.listdir(base):
         fn = os.path.join(base, locale, 'LC_MESSAGES', 'django.po')
         if not os.path.isfile(fn):

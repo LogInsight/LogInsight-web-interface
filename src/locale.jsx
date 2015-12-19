@@ -22,22 +22,21 @@ let i18n = null;
 export function setLocale(locale) {
   let translations = getTranslations(locale);
   i18n = new Jed({
-    'domain' : 'graylog',
+    'domain' : 'graylog_domain',
     'missing_key_callback' : function(key) {
     },
     'locale_data': {
-      'graylog': translations
+      'graylog_domain': translations
     }
   });
 }
 
-// setLocale('en');
+//setLocale('en');
 setLocale('zh_CN')
 
 function formatForReact(formatString, args) {
   let rv = [];
   let cursor = 0;
-
   // always re-parse, do not cache, because we change the match
   sprintf.parse(formatString).forEach((match, idx) => {
     if (typeof match === 'string') {
@@ -204,6 +203,7 @@ export function gettext(string, ...args) {
   if (args.length > 0) {
     rv = format(rv, args);
   }
+  console.log('----------------------')
   return mark(rv);
 }
 
@@ -213,7 +213,6 @@ export function ngettext(singular, plural, ...args) {
 
 /* special form of gettext where you can render nested react
    components in template strings.  Example:
-
       gettextComponentTemplate('Welcome. Click [link:here]', {
         root: <p/>,
         link: <a href="#" />

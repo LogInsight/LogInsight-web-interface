@@ -6,6 +6,7 @@ import SessionStore from 'stores/sessions/SessionStore';
 
 import disconnectedStyle from '!style/useable!css!less!stylesheets/disconnected.less';
 import authStyle from '!style/useable!css!less!stylesheets/auth.less';
+import {t} from '../locale'
 
 const LoginPage = React.createClass({
   mixins: [Reflux.connect(SessionStore), Reflux.ListenerMethods],
@@ -54,13 +55,13 @@ const LoginPage = React.createClass({
         <div className="container" id="login-box">
           <Row>
             <form className="col-md-4 col-md-offset-4 well" id="login-box-content" onSubmit={this.onSignInClicked}>
-              <legend><i className="fa fa-group"/> Welcome to Graylog</legend>
+              <legend><i className="fa fa-group"/> {t('Welcome to Graylog')}</legend>
 
               {alert}
 
-              <Input ref="username" type="text" placeholder="Username" autoFocus />
+              <Input ref="username" type="text" placeholder={t("Username")} autoFocus />
 
-              <Input ref="password" type="password" placeholder="Password" />
+              <Input ref="password" type="password" placeholder={t("Password")} />
 
               <ButtonInput type="submit" bsStyle="info">Sign in</ButtonInput>
 
