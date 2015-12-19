@@ -20,7 +20,9 @@ const webpackConfig = {
     path: BUILD_PATH,
     vendor: ['react', 'react-router', 'react-bootstrap'],
     filename: '[name].[hash].js',
+   // publicPath: 'http://localhost:9000/_static/sentry/dist/graylog/',
     publicPath: '/',
+
   },
   module: {
     preLoaders: [
@@ -34,6 +36,7 @@ const webpackConfig = {
       { test: /\.png$/, loader: 'url-loader' },
       { test: /\.less$/, loader: 'style!css!less' },
       { test: /\.css$/, loader: 'style!css' },
+      {test: /\.po$/,loader: 'po-catalog-loader',query: { referenceExtensions: ['.js', '.jsx'], domain: 'graylog' }},
     ],
   },
   resolve: {
