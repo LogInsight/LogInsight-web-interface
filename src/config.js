@@ -1,5 +1,5 @@
 const appConfig = {
-  gl2ServerUrl: 'http://localhost:12900',
+  gl2ServerUrl: 'http://123.57.167.133:12900',
   gl2AppPathPrefix: '',
 };
 
