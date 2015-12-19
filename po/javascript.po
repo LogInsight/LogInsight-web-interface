@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+
+#: pages/LoginPage.jsx:58
+msgid "Welcome to Graylog"
+msgstr ""
+
+#: pages/LoginPage.jsx:62
+msgid "Username"
+msgstr ""
+
+#: pages/LoginPage.jsx:64
+msgid "Password"
+msgstr ""
+
+#: pages/LoginPage.jsx:66
+msgid "Sign in"
+msgstr ""
+
+#: pages/LoginPage.jsx:70
+msgid "No configured node was ever reached."
+msgstr ""
+
+#: pages/LoginPage.jsx:71
+msgid "of"
+msgstr ""
+
+#: pages/LoginPage.jsx:71
+msgid "nodes connected."
+msgstr ""
+
+#: locale.jsx:224
+msgid ""
+msgstr ""

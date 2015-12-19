@@ -63,12 +63,12 @@ const LoginPage = React.createClass({
 
               <Input ref="password" type="password" placeholder={t("Password")} />
 
-              <ButtonInput type="submit" bsStyle="info">Sign in</ButtonInput>
+              <ButtonInput type="submit" bsStyle="info">{t('Sign in')}</ButtonInput>
 
               <div className="login-advanced">
                 <div className="footer pull-right">
-                  <span id="total-count-zero" className="hidden">No configured node was ever reached.</span>
-                  <span id="total-count-nonzero"><span id="connected-count"/> of <span id="total-count"/> nodes connected.</span>
+                  <span id="total-count-zero" className="hidden">{t('No configured node was ever reached.')}</span>
+                  <span id="total-count-nonzero"><span id="connected-count"/> {t('of')} <span id="total-count"/> {t('nodes connected.')}</span>
                 </div>
                 <br style={{clear: 'both'}} />
               </div>
