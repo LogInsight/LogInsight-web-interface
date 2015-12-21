@@ -3,7 +3,7 @@ build: locale
 
 build-js-po:
 	mkdir -p po 
-	GRAYLOG_EXTRACT_TRANSLATIONS=1 ./node_modules/.bin/webpack
+	GRAYLOG_EXTRACT_TRANSLATIONS=1 ./node_modules/.bin/webpack --config webpack.config.translation.js
 
 locale: build-js-po
 	cd src && django-admin.py makemessages -l en -e jsx -v 2
