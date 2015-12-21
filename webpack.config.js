@@ -68,7 +68,7 @@ const commonConfigs = {
 if (TARGET === 'start') {
   console.log('Running in development mode');
   module.exports = merge(webpackConfig, {
-    devtool: 'eval',
+    devtool: 'source-map',
     devServer: {
       historyApiFallback: true,
       hot: true,
