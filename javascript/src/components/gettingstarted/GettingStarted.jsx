@@ -43,7 +43,7 @@ const GettingStarted = React.createClass({
   render() {
     let dismissButton = null;
     if (!this.props.noButton) {
-      dismissButton = <Button bsStyle="default" bsSize="small" onClick={this._dismissGuide}><i className="fa fa-times"></i> Dismiss guide</Button>;
+      dismissButton = <Button bsStyle="default" bsSize="small" onClick={this._dismissGuide}><i className="fa fa-times"></i> 我知道了</Button>;
     }
     let gettingStartedContent = null;
     if (this.state.showStaticContent) {
